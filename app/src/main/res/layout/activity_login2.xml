@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Напишите его, чтобы подтвердить, что это вы, а не кто-то другой входит в личный кабинет"
+            android:textColor="#B0B0B0"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/codeEditText1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="1"
+                android:hint="*"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:background="#313234"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/codeEditText2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="1"
+                android:hint="*"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:background="#313234"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/codeEditText3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="1"
+                android:hint="*"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:background="#313234"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/codeEditText4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="1"
+                android:hint="*"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:background="#313234"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Подтвердить"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#FFFFFF"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>

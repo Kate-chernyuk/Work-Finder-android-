@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center">
+
+            <EditText
+                android:id="@+id/search_field"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#313234"
+                android:drawableStart="@drawable/baseline_search_24"
+                android:hint="Должность, ключевые слова"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageView
+                android:id="@+id/filter_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:contentDescription="Фильтр"
+                android:src="@drawable/type_filter__state_default" />
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recommendation_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:layout_below="@id/panel"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/vacancies_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вакансии для вас"
+            android:layout_below="@id/recommendation_recycler"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vacancies_recycler"
+            android:layout_below="@id/vacancies_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/view_more_button"
+            />
+
+        <Button
+            android:id="@+id/view_more_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Еще вакансии"
+
+            android:layout_above="@id/bottom_navigation"
+            android:backgroundTint="#1E88E5"
+            android:textColor="#FFFFFF"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>
