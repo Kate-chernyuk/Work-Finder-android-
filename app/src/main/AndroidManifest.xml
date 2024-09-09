@@ -33,10 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="com.yandex.mapkit.API_KEY"
-            android:value="1d6eda15-f458-4e78-bcd9-b62b8f11bc51" />
     </application>
 
 </manifest>
